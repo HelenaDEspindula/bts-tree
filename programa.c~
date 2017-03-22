@@ -12,8 +12,8 @@
 
 int main()
 {
-	inicializa_arvore ();
-	
-	libera_malloc ();
+	cria_sent();
+	leitura_arquivo();
+	libera_mallocs();
 	return(0);
 }

@@ -24,7 +24,7 @@ t_no * raiz;
 
 /* --- Funções --- */
 
-void inicializa_arvore ();
+void inicializa_arvore (t_no *raiz);
 
 void libera_malloc ();
 
