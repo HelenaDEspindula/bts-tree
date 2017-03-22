@@ -1,0 +1,35 @@
+Alunas:
+	hrsde16 - Helena Regina Salomé D'Espindula - GRR20161445
+	lk16 - Louise Knauber - GRR20161471
+
+Execução:
+	$ ./programa < entrada.txt > saida.txt
+
+Observações:
+	- Implementada apenas primeira parte do trabalho (operações +, -, * e =);
+	- As operações da segunda parte do trabalho foram ignoradas;
+	- A estrutura de dados utilizada no trabalho foi uma lista duplamente encadeada com sentinela. Essa estrutura foi escolhida por ser mais maleável para inserir/remover elementos da lista. Todos os nós foram alocados dinamicamente;
+	- Cada nó da lista é uma struct com o num_elementos, o conjunto e dois ponteiros para os outros nós;
+	- Quando a operação chamada é "+", o programa utiliza a busca realizada anteriormente que retorna um ponteiro correto para inserir o conjunto na lista ordenada. Essa inserção é feita antes do ponteiro de t_conjunto que a função "procura_conjunto" retornou.
+	- O programa utiliza um índice para facilitar a busca de conjuntos, o indice é um vetor de ponteiros do tipo t_conjunto (t_conjunto * * ppindice) que aponta para o primeiro nó de cada num_elementos;
+	- A função "procura_conjunto" modifica a variavel achou para "s" (se foi encontrado) ou  "n" (se não foi encontrado) e retorna o ponteiro para o conjunto buscado (se foi encontrado) ou o o conjunto seguinte (se não for encontrado);
+	- Quando a operação chamada é "-", remove o nó da lista, desaloca a memória utilizada por esse nó e ajusta os índices.
+
+Erros:
+	- O programa compila sem erros ou warnings;
+	- Não apresentou erros sobre as condições testas.
+
+Dificuldades:
+	- Encontrar uma estrutura que fosse eficiente e facilitasse a implementação tanto da primeira como segunda parte do projeto;
+	- Implementar a primeira parte do trabalho de forma que facilitasse implementação da segunda parte;
+	- Implementar uma busca eficiente. Para resolver essa questão, optou-se pela criação de um índice que aumentou um pouco o custo de inscerção e deleção mas facilitou a busca, em especial em conjuntos grandes, para os quais sem o índice seria necessário percorrer uma lista longa item por item.
+
+Tempos (obtidos com o "$time ./programa < exemplos"):
+	Exemplo						Tempo
+	entrada_exemplo_simples.txt		real 0m0.003s / user 0m0.000s / sys 0m0.000s
+	entrada_1k.txt					real 0m0.158s / user 0m0.148s / sys 0m0.008s
+	entrada_2k.txt					real	0m0.219s / user 0m0.208s / sys 0m0.008s
+	entrada_4k.txt					real 0m1.069s / user 0m0.468s / sys 0m0.028s
+	entrada_8k.txt					real 0m0.843s / user 0m0.812s / sys 0m0.028s
+
+
