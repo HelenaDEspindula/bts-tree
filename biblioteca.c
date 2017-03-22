@@ -13,18 +13,46 @@
 
 void inicializa_arvore ()
 {
-	raiz = (no *) malloc (sizeof (no));
+	raiz = (t_no *) malloc (sizeof (t_no));
 	if (raiz == 0) abort (); // caso a alocação não tenha ocorrido
 }
 
 void libera_malloc ()
 {
+	free(raiz);
+}
+
+int leitura()
+{
+	int x, existe;
+	scanf ("%d", &x);
+	if (x < 0)
+	{
+		printf("Não há numeros nessa arvore.\n");
+		return (1);
+	}
+	while (x >= 0)
+	{
+		printf("Eu li o numero: %d\n", x);
+		// Busca na arvore, se já existir retorna 1, se não existir retorna 0 e inclui
+		if (existe != 0)
+		{
+			printf("Esse numero já esta na arvore ponteiro = XXX\n"); // colocar ponteiro
+		}
+		else
+		{
+			// Inclui na arvore
+		}
+		scanf ("%d", &x);
+	}
+	return (0);
 
 }
 
+
 int acha_posicao ( int x )
 {
-	no * ponteiro = raiz;
+	t_no * ponteiro = raiz;
 	while (ponteiro != 0)
 	{
 		if ( x == (*ponteiro).valor )
@@ -33,10 +61,15 @@ int acha_posicao ( int x )
 		}
 		if (x > (*ponteiro).valor )
 		{
-
+			// falta coisa
 		}
-		else (
+		else
+		{
+			// falta coisa
+		}
 	}
+
+	return 0;
 
 }
 

@@ -12,8 +12,33 @@
 
 int main()
 {
-	cria_sent();
-	leitura_arquivo();
-	libera_mallocs();
+	inicializa_arvore ();
+
+	int x, existe;
+	scanf ("%d", &x);
+	if (x < 0)
+	{
+		printf("Não há numeros nessa arvore.\n");
+		return (1);
+	}
+	while (x >= 0)
+	{
+		printf("Eu li o numero: %d\n", x);
+		// Busca na arvore, se já existir retorna 1, se não existir retorna 0 e inclui
+		if (existe != 0)
+		{
+			printf("Esse numero já esta na arvore ponteiro = XXX\n"); // colocar ponteiro
+		}
+		else
+		{
+			// Inclui na arvore
+		}
+		scanf ("%d", &x);
+	}
+
+		
+	
+
+	libera_malloc ();
 	return(0);
 }

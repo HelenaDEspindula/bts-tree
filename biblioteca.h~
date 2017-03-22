@@ -14,7 +14,7 @@ typedef struct no
 {
 	int valor;
 	int altura;
-	struct no * pai
+	struct no * pai;
 	struct no * filho_dir_maior;
 	struct no * filho_esq_menor;
 } t_no ;
@@ -24,9 +24,10 @@ t_no * raiz;
 
 /* --- Funções --- */
 
-void inicializa_arvore (t_no *raiz);
+void inicializa_arvore ();
 
 void libera_malloc ();
 
+int acha_posicao ( int x );
 
 #endif

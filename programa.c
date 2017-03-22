@@ -13,7 +13,12 @@
 int main()
 {
 	inicializa_arvore ();
+
+	int ok;
+
+	ok = leitura();	
 	
 	libera_malloc ();
-	return(0);
+
+	return(ok);
 }
