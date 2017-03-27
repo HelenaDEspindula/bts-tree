@@ -12,8 +12,6 @@
 
 int main()
 {
-	inicializa_arvore ();
-
 	int ok;
 
 	ok = leitura();	

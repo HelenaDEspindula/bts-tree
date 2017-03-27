@@ -24,12 +24,10 @@ t_no * raiz;
 
 /* --- Funções --- */
 
-void inicializa_arvore ();
-
 void libera_malloc ();
 
 int leitura();
 
-int busca_numero ( int x, t_no * ponteiro );
+int busca_numero ( int x, t_no * ponteiro, t_no * pai_ponteiro );
 
 #endif
