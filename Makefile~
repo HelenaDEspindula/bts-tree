@@ -26,10 +26,4 @@ programa.o: programa.c biblioteca.h
 biblioteca.o: biblioteca.c biblioteca.h
 	gcc -c biblioteca.c $(CFLAGS)
 
-#remove arquivos temporários
-clean:
-	-rm $(objs) *~
 
-#remove tudo o que não for código fonte
-purge: clean
-		-rm programa
