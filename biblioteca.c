@@ -20,39 +20,55 @@ void inicializa_arvore ()
 void libera_malloc ()
 {
 	free(raiz);
+	printf(" liberando allocacao dinamica... \n");
 }
 
 int leitura()
 {
 	int x, existe;
+	t_no * ponteiro = raiz;
+
+	printf("Insira novo numero na arvore (negativo para encerrar):\n");
 	scanf ("%d", &x);
 	if (x < 0)
 	{
 		printf("Não há numeros nessa arvore.\n");
 		return (1);
 	}
+
+	printf("Eu li o numero: %d\n", x);
+
+	ponteiro = (t_no *) malloc (sizeof (t_no));
+	if (raiz == 0) abort (); // caso a alocação não tenha ocorrido
+
+
 	while (x >= 0)
 	{
-		printf("Eu li o numero: %d\n", x);
+		existe = busca_numero (x, ponteiro);
+
 		// Busca na arvore, se já existir retorna 1, se não existir retorna 0 e inclui
 		if (existe != 0)
 		{
-			printf("Esse numero já esta na arvore ponteiro = XXX\n"); // colocar ponteiro
+			printf("Esse numero já esta na arvore ponteiro = %p.\n", ponteiro); // colocar ponteiro
 		}
 		else
 		{
 			// Inclui na arvore
 		}
+		printf("Insira novo numero na arvore (negativo para encerrar):\n");
 		scanf ("%d", &x);
+		printf("Eu li o numero: %d\n", x);
 	}
+	printf("Saindo...");
 	return (0);
 
 }
 
 
-int acha_posicao ( int x )
+int busca_numero ( int x, t_no * ponteiro )
 {
-	t_no * ponteiro = raiz;
+	/*	
+	ponteiro = raiz;
 	while (ponteiro != 0)
 	{
 		if ( x == (*ponteiro).valor )
@@ -68,8 +84,8 @@ int acha_posicao ( int x )
 			// falta coisa
 		}
 	}
-
-	return 0;
+	*/
+	return 1;
 
 }
 

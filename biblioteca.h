@@ -30,6 +30,6 @@ void libera_malloc ();
 
 int leitura();
 
-int acha_posicao ( int x );
+int busca_numero ( int x, t_no * ponteiro );
 
 #endif
